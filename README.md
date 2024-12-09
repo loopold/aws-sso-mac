@@ -12,17 +12,12 @@ Steps to keep your environment authenticated.
 
 First, I prefer to sign in to the **AWS Access Portal**. I'll use the fingerprint scanner.
 
-<div style="width:50%;">
-
-![MFA](image.png)
-</div>
+<img src="image.png" alt="MFA" width="50%"/>
 
 To get this I registered Built-in authenticator before. The link to the MFA Devices page is in the drop-down menu on your profile icon (top right).
 
-<div style="width:50%;">
+<img src="image-1.png" alt="Register MFA" width="50%"/>
 
-![Register MFA](image-1.png)
-</div>
 
 ### SSO
 
@@ -103,7 +98,3 @@ kubectl get po
     aws-node-23456                                 2/2     Running
     aws-node-34567                                 2/2     Running
 ```
-
-<style type="text/css">
-    img[alt=prompt]{ width: 491px; }
-</style>
