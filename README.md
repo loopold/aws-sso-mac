@@ -1,6 +1,7 @@
 # AWS SSO on macOS
 
-In this tutorial we use Google Chrome browser only for their profile feature. The same can be achieved with Safari using the default profile.
+In this tutorial I use the Google Chrome browser only for its profile feature. The same can be achieved with Safari using the default profile.
+
 
 ## Steps
 
@@ -13,7 +14,7 @@ First, I prefer to sign in to the **AWS Access Portal**. I'll use the fingerprin
 
 ![MFA](image.png)
 
-To get this I registered Built-in authenticator before
+To get this I registered Built-in authenticator before. The link to the MFA Devices page is in the drop-down menu on your profile icon (top right).
 
 ![Register MFA](image-1.png)
 
@@ -61,6 +62,14 @@ export AWS_SDK_LOAD_CONFIG=1
 export ENVIRONMENT=production-virginia
 ```
 
+On the Mac (and not only, because I use it on my linuxes too) the must-have extension in my opinion is [Oh My Zsh](https://ohmyz.sh). Use it!
+
+Thanks to this, I can see the main shell parameters set in my prompt bar. In my case (`ZSH_THEME="agnoster"`) the prompt looks like this.
+
+![prompt](image-2.png)
+
+It was strange to me why the above is in red. I thought I had some misconfigurations. But **OhMyZsh** never ceases to amaze me. It shows yellow on red if the profile name contains `production` or ends in `-prod` :-)
+
 Verify:
 ```sh
 aws sts get-caller-identity
@@ -75,18 +84,18 @@ If you want to work with Kubernetes cluster in a selected region use the `kubect
 
 ```sh
 kubectx                                                              
-[...]
-arn:aws:eks:us-east-1:123123123123:cluster/company123-eks-production-virginia
+    [...]
+    arn:aws:eks:us-east-1:123123123123:cluster/company123-eks-production-virginia
 
 kubens 
-[...]
-kube-system
+    [...]
+    kube-system
 
 kubectl get po                                        
-NAME                                           READY   STATUS 
-aws-load-balancer-controller-1231231231-12345  1/1     Running
-aws-node-12345                                 2/2     Running
-aws-node-23456                                 2/2     Running
-aws-node-34567                                 2/2     Running
+    NAME                                           READY   STATUS 
+    aws-load-balancer-controller-1231231231-12345  1/1     Running
+    aws-node-12345                                 2/2     Running
+    aws-node-23456                                 2/2     Running
+    aws-node-34567                                 2/2     Running
 ```
 
