@@ -65,7 +65,7 @@ Verify:
 ```sh
 aws sts get-caller-identity
 {
-    "UserId": "AROAQRODYGV3TFPE7B26U:pgogolin",
+    "UserId": "1234QWERASDFZXCVBVASD:pgogolin",
     "Account": "123123123123",
     "Arn": "arn:aws:sts::123123123123:assumed-role/AWSReservedSSO_company123AdministratorAccess_cb123123123123cc/pgogolin"
 }
