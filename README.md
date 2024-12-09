@@ -34,6 +34,9 @@ region=us-east-1
 ```
 
 Then you can execute `sso login` command:
+
+Use the `--no-browser` option to use a non-default browser. Then copy and paste the link into the correct authenticated profile on the web browser.
+
 ```sh
 aws sso login --profile company123-production-virginia --no-browser
 ```
